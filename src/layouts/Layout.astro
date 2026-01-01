@@ -1,22 +1,67 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Sonberg Consulting | Strategic Solutions</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-<style>
+<style is:global>
+	:root {
+		--color-navy-900: #0a192f;
+		--color-navy-800: #112240;
+		--color-slate-100: #e6f1ff;
+		--color-slate-300: #8892b0;
+		--color-gold-500: #D4AF37;
+	}
+
 	html,
 	body {
 		margin: 0;
-		width: 100%;
-		height: 100%;
+		padding: 0;
+		box-sizing: border-box;
+		background-color: var(--color-navy-900);
+		color: var(--color-slate-100);
+		font-family: 'Inter', sans-serif;
+	}
+
+	*, *::before, *::after {
+		box-sizing: inherit;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		margin-top: 0;
+		line-height: 1.2;
+		color: white;
+	}
+
+	p {
+		color: var(--color-slate-300);
+		line-height: 1.6;
+	}
+
+	a {
+		color: inherit;
+		text-decoration: none;
+		transition: color 0.2s ease;
+	}
+
+	a:hover {
+		color: var(--color-gold-500);
+	}
+
+	.container {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 1.5rem;
 	}
 </style>
